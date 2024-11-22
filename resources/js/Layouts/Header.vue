@@ -59,7 +59,7 @@
                 <Link @click="toggleSidebar" v-for="item in menuItems" :key="item.name" :href="item.href"
                     class="flex items-center rounded-lg px-2 py-2 hover:bg-blue-500 hover:text-white dark:hover:bg-gray-900 dark:text-gray-300">
                 <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
-                <span v-if="isExpanded" class="ml-3 transition-opacity duration-300 dark:text-gray-300">{{ item.name }}</span>
+                <span class="ml-3 transition-opacity duration-300 dark:text-gray-300">{{ item.name }}</span>
                 </Link>
             </nav>
         </div>

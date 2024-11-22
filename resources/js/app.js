@@ -6,7 +6,7 @@ import { createInertiaApp } from '@inertiajs/vue3';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 import MainLayout from './Layouts/MainLayout.vue';
 
-const appName = 'Sistema de coisa';
+const appName = 'Scola';
 
 createInertiaApp({
     title: (title) => appName,

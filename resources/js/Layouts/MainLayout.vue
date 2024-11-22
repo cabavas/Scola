@@ -1,6 +1,8 @@
 <template>
-    <div class="flex h-screen bg-gray-100">
-      <Aside />
+    <div class="flex h-screen bg-gray-100 dark:bg-gray-800">
+      <div class="hidden md:block">
+        <Aside />
+      </div>
       <Header :auth="$page.props.auth" :is-expanded="isExpanded" />
       <main class="flex-1 overflow-x-hidden overflow-y-auto transition-margin duration-300 mt-14" :class="{ 'ml-64': isExpanded, 'ml-16': !isExpanded }">
         <slot></slot>

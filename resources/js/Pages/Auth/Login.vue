@@ -1,15 +1,15 @@
 <template>
-    <div class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('/images/bg.jpeg')">
-        <div class="bg-white p-8 rounded-lg shadow-xl w-1/3">
+    <div class="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-xl w-full md:w-1/3">
             <form @submit.prevent="login">
                 <div class="w-full">
 
-                    <div class="w-2/3 mx-auto">
+                    <div class="w-1/3 mx-auto">
                         <img src="/images/logo.png" alt="">
                     </div>     
 
                     <div class="mt-4">
-                        <h3 class="text-center font-bold text-2xl">Sistema de negócios e coisas</h3>
+                        <h3 class="text-center font-bold text-2xl dark:text-gray-300">Scola: O futuro da sua escola começa aqui.</h3>
                     </div>
 
                     <div class="mt-4">
@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="mt-4">
-                        <label for="password" class="label">Password</label>
+                        <label for="password" class="label">Senha</label>
                         <input type="password" id="password" class="input" v-model="form.password" />
                         <div class="input-error" v-if="form.errors.password">{{ form.errors.password }}</div>
                     </div>

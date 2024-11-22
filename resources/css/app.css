@@ -13,7 +13,7 @@
     }
 
     .label {
-        @apply block mb-1 text-gray-500 font-medium
+        @apply block mb-1 text-gray-500 font-medium dark:text-gray-200
     }
 
     .input {
@@ -25,6 +25,6 @@
     }
 
     .btn-primary {
-        @apply bg-green-600 hover:bg-green-500 text-white font-medium p-2 rounded-md
+        @apply bg-blue-500 hover:bg-blue-500 text-white font-medium p-2 rounded-md
     }
 }

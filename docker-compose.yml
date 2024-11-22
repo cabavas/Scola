@@ -7,7 +7,6 @@ services:
     container_name: laravel-app
     restart: unless-stopped
     working_dir: /var/www
-    user: "${UID}:${GID}"
     environment:
       - WWWUSER=${UID}
       - WWWGROUP=${GID}
@@ -33,17 +32,15 @@ services:
       - laravel-network
 
   # MySQL Database
-  mysql:
+  db:
     image: mysql:8.0
     container_name: laravel-mysql
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: laravel_db
+      MYSQL_DATABASE: scola
       MYSQL_ROOT_PASSWORD: '@#Lolo3105#@'
-      MYSQL_USER: root
-      MYSQL_PASSWORD: '@#Lolo3105#@'
     ports:
-      - "3307:3306"  # Changed to different port
+      - "3306:3306"  # Changed to different port
     volumes:
       - mysql-data:/var/lib/mysql
     networks:
@@ -68,14 +65,14 @@ services:
     image: phpmyadmin/phpmyadmin
     container_name: laravel-phpmyadmin
     environment:
-      PMA_HOST: mysql
+      PMA_HOST: db
       PMA_PORT: 3306
       PMA_USER: root
       PMA_PASSWORD: '@#Lolo3105#@'
     ports:
       - "8080:80"
     depends_on:
-      - mysql
+      - db
     networks:
       - laravel-network
 

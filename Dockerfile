@@ -1,5 +1,7 @@
 FROM php:8.2-fpm
 
+ARG user=cabavas
+
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     git \
@@ -48,6 +50,9 @@ RUN mkdir -p /var/www/storage/logs \
 RUN chown -R www-data:www-data /var/www \
     && chmod -R 775 /var/www/storage \
     && chmod -R 775 /var/www/bootstrap/cache
+
+RUN chown -R www-data:www-data /var/www/storage
+RUN chmod -R 775 /var/www/storage
 
 # Install dependencies
 RUN composer install --ignore-platform-reqs

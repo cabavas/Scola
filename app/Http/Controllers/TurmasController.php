@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class TurmasController extends Controller
 {
     public function index() {
-        return inertia('Dashboard/Index');
+        return inertia('Turmas/Index');
     }
 }

@@ -56,7 +56,7 @@
         <div v-if="isSidebarOpen" class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-gray-800 h-full shadow-lg z-50">
             <button @click="toggleSidebar" class="p-4 dark:text-gray-300">Fechar</button>
             <nav>
-                <Link v-for="item in menuItems" :key="item.name" :href="item.href"
+                <Link @click="toggleSidebar" v-for="item in menuItems" :key="item.name" :href="item.href"
                     class="flex items-center rounded-lg px-2 py-2 hover:bg-blue-500 hover:text-white dark:hover:bg-gray-900 dark:text-gray-300">
                 <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                 <span v-if="isExpanded" class="ml-3 transition-opacity duration-300 dark:text-gray-300">{{ item.name }}</span>

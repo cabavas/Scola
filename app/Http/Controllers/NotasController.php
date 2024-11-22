@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class NotasController extends Controller
 {
     public function index() {
-        return inertia('Dashboard/Index');
+        return inertia('Notas/Index');
     }
 }

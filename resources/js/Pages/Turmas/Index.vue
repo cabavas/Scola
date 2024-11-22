@@ -1,6 +1,5 @@
 <template>
-<h1>USERS</h1>
-
+<h1 class="text-gray-300">TURMAS</h1>
 </template>
 
 <script>
